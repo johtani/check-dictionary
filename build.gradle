@@ -1,0 +1,16 @@
+group 'info.info.analyze.dictionary'
+version '1.0-SANPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'maven'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.univocity:univocity-parsers:2.8.3'
+}
+
+sourceCompatibility = 1.11
