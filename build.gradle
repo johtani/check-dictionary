@@ -11,6 +11,8 @@ repositories {
 
 dependencies {
     compile 'com.univocity:univocity-parsers:2.8.3'
+    compile files('target_jars/lucene-analyzers-common-9.0.0-SNAPSHOT.jar')
+    compile files('target_jars/lucene-core-9.0.0-SNAPSHOT.jar')
 }
 
 sourceCompatibility = 1.11

@@ -7,6 +7,8 @@ LuceneのKuromojiに利用できる辞書かどうかを判断する基準がい
 https://search-tech.connpass.com/event/146365/
 この勉強会に参加して、UniDicのビルドの確認のためにサクッと作ったツールです。
 
+##  
+
 # License
 
 MITライセンス
