@@ -72,7 +72,7 @@ public class AnalyzeSample {
             tokens.reset();
             CharTermAttribute attr = tokens.getAttribute(CharTermAttribute.class);
             for (int i=0;tokens.incrementToken();i++) {
-                System.out.println("token[i] is ["+attr.toString()+"]");
+                System.out.println("token["+i+"] is ["+attr.toString()+"]");
             }
             tokens.end();
             tokens.close();
@@ -81,7 +81,7 @@ public class AnalyzeSample {
 
     public static void main(String[] args) {
 
-        String target = "令和元年も残りはあと2ヶ月ちょっととなりました。";
+        String target = "10月半ばになりようやく秋模様になってきました。";
 
         // load kuromoji tokenizer from specified path
         String ipadicPath = "./target_jars/compare/lucene-analyzers-kuromoji-ipadic-9.0.0-SNAPSHOT.jar";
