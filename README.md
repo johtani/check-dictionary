@@ -25,6 +25,8 @@ ipadicのCSVファイル内に、Kuromojiが[Punctuation(区切り文字)と判�
 * すべてが区切り文字 : 0単語
 * 先頭以外に区切り文字が出てくるもの : 723単語 
 
+[Gistに一覧を貼っておきました。](https://gist.github.com/johtani/50aa2776a385c5c8dfa3a0d1e4e268cd)
+
 ## AnalyzeSample
 
 BuildしたKuromojiの2種類のjar（ipadicとunidic）を使用して、同じ文章をTokenizeして標準出力に出力する。

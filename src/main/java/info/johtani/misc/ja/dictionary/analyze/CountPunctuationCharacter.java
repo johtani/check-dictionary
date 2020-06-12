@@ -42,9 +42,9 @@ public class CountPunctuationCharacter {
             System.out.println("hasPunctuations: ["+this.hasPunctuation.size()+"]");
             System.out.println("+++++++++++++++++ Start with Punctuation +++++++++++++++++++++");
             for (String token : this.startWithPunctuation) {
-                if (token.toCharArray().length > 1) {
+                //if (token.toCharArray().length > 1) {
                     System.out.println(token);
-                }
+                //}
             }
             System.out.println("+++++++++++++++++ Has Punctuation without 1st char +++++++++++++++++++++");
             for (String token: this.hasPunctuation) {
