@@ -15,7 +15,7 @@ UniDicのCSVファイルをKuromojiに適用する場合に、適したデータ
 
 ## CountPunctuationCharacter
 
-ipadicのCSVファイル内に、Kuromojiが[Punctuation(区切り文字)と判断している](https://github.com/apache/lucene-solr/blob/master/lucene/analysis/kuromoji/src/java/org/apache/lucene/analysis/ja/JapaneseTokenizer.java#L1897)単語がどのくらい存在しているかをチェックする。
+ipadicのCSVファイル内に、Kuromojiが[Punctuation(区切り文字)と判断している](https://github.com/apache/lucene-solr/blob/master/lucene/analysis/kuromoji/src/java/org/apache/lucene/analysis/ja/JapaneseTokenizer.java#L1897) 単語がどのくらい存在しているかをチェックする。
 最初の文字が区切り文字、全てが区切り文字(1文字以上の単語で)、最初以外の場所に区切り文字、の3つの種類を数えます。
 1単語はいずれかの1つに数えています。
 
