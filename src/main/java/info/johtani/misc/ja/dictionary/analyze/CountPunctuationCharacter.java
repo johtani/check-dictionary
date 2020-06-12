@@ -25,8 +25,12 @@ public class CountPunctuationCharacter {
     }
 
     private void run() {
+        // for ipadic
         String dictionaryPath = "/Users/johtani/tmp/dictionary/mecab-ipadic-2.7.0-20070801";
         String encoding = "euc-jp";
+        // for unidic 2.1.2
+        //String dictionaryPath = "/Users/johtani/tmp/dictionary/unidic-mecab-2.1.2_src";
+        //String encoding = "utf-8";
 
         CsvParserSettings settings = new CsvParserSettings();
         CsvFormat format = new CsvFormat();
