@@ -7,11 +7,23 @@ LuceneのKuromojiに利用できる辞書かどうかを判断する基準がい
 https://search-tech.connpass.com/event/146365/
 この勉強会に参加して、UniDicのビルドの確認のためにサクッと作ったツールです。
 
-現在2つのツールがあります。
+現在3つのツールがあります。
 
 ## AnalyzeDictionary
 
 UniDicのCSVファイルをKuromojiに適用する場合に、適したデータではないものが存在しないかをチェックする。
+
+## CountPunctuationCharacter
+
+ipadicのCSVファイル内に、Kuromojiが[Punctuation(区切り文字)と判断している](https://github.com/apache/lucene-solr/blob/master/lucene/analysis/kuromoji/src/java/org/apache/lucene/analysis/ja/JapaneseTokenizer.java#L1897)単語がどのくらい存在しているかをチェックする。
+最初の文字が区切り文字、全てが区切り文字(1文字以上の単語で)、最初以外の場所に区切り文字、の3つの種類を数えます。
+1単語はいずれかの1つに数えています。
+
+結果 : 
+
+* 最初の1文字目が区切り文字 : 104単語(うち2文字以上の長さのものは7単語)
+* すべてが区切り文字 : 0単語
+* 先頭以外に区切り文字が出てくるもの : 723単語 
 
 ## AnalyzeSample
 
