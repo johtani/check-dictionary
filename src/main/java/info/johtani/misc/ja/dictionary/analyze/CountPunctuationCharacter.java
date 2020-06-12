@@ -50,6 +50,10 @@ public class CountPunctuationCharacter {
                     System.out.println(token);
                 //}
             }
+            System.out.println("+++++++++++++++++ all Punctuations  +++++++++++++++++++++");
+            for (String token: this.allPunctuations) {
+                System.out.println(token);
+            }
             System.out.println("+++++++++++++++++ Has Punctuation without 1st char +++++++++++++++++++++");
             for (String token: this.hasPunctuation) {
                 System.out.println(token);
@@ -80,12 +84,14 @@ public class CountPunctuationCharacter {
                 String surface = values[0];
                 char[] token = surface.toCharArray();
                 if (isPunctuation(token[0])) {
-                    startWithPunctuation.add(surface);
                     if (token.length == 1) {
                         oneCharInStartWithPunctuation++;
+                        startWithPunctuation.add(surface);
+                    } else if (!isAllCharPunctuation(token)) {
+                        startWithPunctuation.add(surface);
+                    } else {
+                        allPunctuations.add(surface);
                     }
-                } else if (isAllCharPunctuation(token)) {
-                    allPunctuations.add(surface);
                 } else if (existPunctuation(token)) {
                     hasPunctuation.add(surface);
                 } else {
